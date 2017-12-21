@@ -1,0 +1,22 @@
+{
+  "name": "dnd",
+  "authors": [
+    "gnoerrana <gnoerrana@gmail.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3",
+    "font-awesome": "~4",
+    "less-easing": "*"
+  },
+  "devDependencies": {
+    "jquery-ui": "^1.12.1"
+  }
+}

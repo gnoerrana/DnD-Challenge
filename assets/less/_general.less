@@ -1,0 +1,91 @@
+// body {
+// 	background: url(https://www.walldevil.com/wallpapers/a72/castle-horror-art-minimal-dark-wallpapers-scary.jpg) no-repeat center top;
+// }
+// .intro {
+// 	color: #FFF;
+// }
+
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+
+.main-wrapper {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+
+.floating-detail {
+	position: fixed;
+	width: 350px;
+	height: 100%;
+	right: -350px;
+	background: #FFF;
+	border: 1px solid #000;
+	top: 0px;
+	padding: 45px 15px 15px 15px;
+	.EaseEffectFast;
+	&.open {
+		right: 0px;
+		.EaseEffectFast;	
+	}
+	.close-detail {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		cursor: pointer;
+		color: @grey-color;
+	}
+	.range {
+		width: 100%;
+		height: 10px;
+		background: rgba(138, 138, 138, 0.2);
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		.inner {
+			width: 0%;
+			background: @grey-color;
+			.EaseEffectSlow;
+			position: absolute;
+		    z-index: 99;
+		    height: 10px;
+		}
+	}
+}
+
+
+.tittle-wrapper {
+	text-align: center;
+}
+
+
+.char-type {
+	padding: 15px;
+	display: block;
+}
+
+
+#character-detail {
+	.item-list,
+	.item-info {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.item-list {
+		text-align: left;
+	}
+}
+
+.footer {
+  height: 60px;
+}
+
+

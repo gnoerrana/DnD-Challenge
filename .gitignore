@@ -1,0 +1,9 @@
+.DS_Store
+.svn
+Thumbs.db
+php_errors.log
+scss/.sass-cache/
+*.map
+*node_modules/
+*bower_components/
+**/desktop.ini
