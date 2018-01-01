@@ -36,10 +36,10 @@
   top: -75px;
   left: -4px;
   text-indent: -9999em;
-  border-top: 6px solid rgba(138, 138, 138, 0.2);
-  border-right: 6px solid rgba(138, 138, 138, 0.2);
-  border-bottom: 6px solid rgba(138, 138, 138, 0.2);
-  border-left: 6px solid @grey-color;
+  border-top: 6px solid rgba(242, 220, 22, 0.5);
+  border-right: 6px solid rgba(242, 220, 22, 0.5);
+  border-bottom: 6px solid rgba(242, 220, 22, 0.5);
+  border-left: 6px solid @yellow-color;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -69,3 +69,26 @@
 // spinner
 
 
+
+
+@keyframes small-bounce {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(8px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

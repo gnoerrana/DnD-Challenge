@@ -1,0 +1,142 @@
+#character-detail {
+	#item-logo {
+		width: 80px;
+		height: 80px;
+		display: block;
+		background-size: 100%;
+		margin-bottom: 30px;
+		&.barbarian {
+			background-image: url(../images/char/barbarian.svg);
+		}
+		&.bard {
+			background-image: url(../images/char/bard.svg);
+		}
+		&.cleric {
+			background-image: url(../images/char/cleric.svg);
+		}
+		&.druid {
+			background-image: url(../images/char/druid.svg);
+		}
+		&.fighter {
+			background-image: url(../images/char/fighter.svg);
+		}
+		&.monk {
+			background-image: url(../images/char/monk.svg);
+		}
+		&.paladin {
+			background-image: url(../images/char/paladin.svg);
+		}
+		&.ranger {
+			background-image: url(../images/char/ranger.svg);
+		}
+		&.rogue {
+			background-image: url(../images/char/rogue.svg);
+		}
+		&.sorcerer {
+			background-image: url(../images/char/sorcerer.svg);
+		}
+		&.warlock {
+			background-image: url(../images/char/warlock.svg);
+		}
+		&.wizard {
+			background-image: url(../images/char/wizard.svg);
+		}
+	}
+	.item-list,
+	.item-info {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.item-list {
+		text-align: right;
+    	color: #848484;
+    	@media (max-width:@screen-xs-max) {
+    		text-align: left;
+    		.h5 {
+    			font-size: 22px;
+    		}
+    	}
+	}
+	.item-info {
+		color: #FFF;
+		#char-name {
+			.titleFonts;
+			font-size: 2em;
+		}
+		.inner-list {
+			padding: 0px;
+			list-style-type: decimal;
+			list-style-position: inside;
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+.char-type {
+	text-align: center;
+	cursor:pointer;
+	margin: 15px 0px;
+    background: rgba(232, 232, 232, 0.2);
+    opacity: 0.8;
+    padding: 15px;
+	display: block;
+    &:hover, &.current {
+    	opacity: 1;
+    }
+    &.current {
+    	-webkit-box-shadow: 5px 5px 0px #bfbfbf;
+    	        box-shadow: 5px 5px 0px #bfbfbf;
+    }
+	.set-url .btn {
+		color: @yellow-color;
+	}
+	.character-name {
+		color: #FFF;
+	}
+	.char-img {
+		width: 64px;
+		height: 64px;
+		display: inline-block;
+		-webkit-background-size: 100%;
+		     -o-background-size: 100%;
+		        background-size: 100%;
+		background-repeat:  no-repeat;
+		&.barbarian {
+			background-image: url(../images/char/barbarian.svg);
+		}
+		&.bard {
+			background-image: url(../images/char/bard.svg);
+		}
+		&.cleric {
+			background-image: url(../images/char/cleric.svg);
+		}
+		&.druid {
+			background-image: url(../images/char/druid.svg);
+		}
+		&.fighter {
+			background-image: url(../images/char/fighter.svg);
+		}
+		&.monk {
+			background-image: url(../images/char/monk.svg);
+		}
+		&.paladin {
+			background-image: url(../images/char/paladin.svg);
+		}
+		&.ranger {
+			background-image: url(../images/char/ranger.svg);
+		}
+		&.rogue {
+			background-image: url(../images/char/rogue.svg);
+		}
+		&.sorcerer {
+			background-image: url(../images/char/sorcerer.svg);
+		}
+		&.warlock {
+			background-image: url(../images/char/warlock.svg);
+		}
+		&.wizard {
+			background-image: url(../images/char/wizard.svg);
+		}
+	}
+}

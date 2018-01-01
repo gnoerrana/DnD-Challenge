@@ -1,12 +1,7 @@
-// body {
-// 	background: url(https://www.walldevil.com/wallpapers/a72/castle-horror-art-minimal-dark-wallpapers-scary.jpg) no-repeat center top;
-// }
-// .intro {
-// 	color: #FFF;
-// }
-
-
-
+body {
+	background: url(../images/bg.jpg) no-repeat center 100%;
+	background-color: #333;
+}
 
 html,
 body {
@@ -19,21 +14,41 @@ body {
   height: auto;
   margin: 0 auto -60px;
   padding: 0 0 60px;
+  &.transparent {
+  	opacity: 0;
+  }
 }
-
-
+.header {
+	padding-bottom: 15px;
+	padding-top: 15px;
+	.logo {
+		width: 120px;
+	    height: 120px;
+	    display: block;
+	    margin:0 auto;
+	    border:4px solid @yellow-color;
+	    -webkit-border-radius: 50%;
+	            border-radius: 50%;
+	    img {
+	    	width: 100%;
+	    }
+	}
+}
 .floating-detail {
 	position: fixed;
-	width: 350px;
-	height: 100%;
-	right: -350px;
-	background: #FFF;
-	border: 1px solid #000;
-	top: 0px;
+	width: 50%;
+    height: calc(100% - 30px);
+    left: -50%;
+    background: #272626;
+    top: 15px;
 	padding: 45px 15px 15px 15px;
 	.EaseEffectFast;
+	@media (max-width:@screen-xs-max) {
+		width: 90%;
+		left: -90%;
+	}
 	&.open {
-		right: 0px;
+		left: 0px;
 		.EaseEffectFast;	
 	}
 	.close-detail {
@@ -52,7 +67,7 @@ body {
 		position: relative;
 		.inner {
 			width: 0%;
-			background: @grey-color;
+			background: #2b91be;
 			.EaseEffectSlow;
 			position: absolute;
 		    z-index: 99;
@@ -64,28 +79,58 @@ body {
 
 .tittle-wrapper {
 	text-align: center;
+	margin-bottom: 35px;
+	color: @yellow-color;
+}
+.intro {
+	color: #FFF;
+	.ilustFonts;
+	font-size: 1.8em;
+	text-align: center;
+}
+.pick-instruct {
+	color: #FFF;
+	position: relative;
+    margin: 35px 0px 30px 0px;
+    display: inline-block;
+    text-align: left;
+    @media (max-width:@screen-xs-max) {
+    	font-size: 14px;
+    }
+    &:after {
+    	position: absolute;
+    	content:" ";
+    	width: 100px;
+    	height: 100px;
+    	display: block;
+    	background: url(../images/arrow-down.svg) no-repeat;
+    	right: -90px;
+	    top: -20px;
+	    background-size: 100%;
+	     -webkit-animation: small-bounce 850ms linear 0s normal none infinite;
+       -moz-animation: small-bounce 850ms linear 0s normal none infinite;
+         -o-animation: small-bounce 850ms linear 0s normal none infinite;
+            animation: small-bounce 850ms linear 0s normal none infinite;
+    }
+    &.hide-arrow {
+    	&:after {
+    		opacity: 0;
+    		-webkit-transition: 0.6s;
+    		   -moz-transition: 0.6s;
+    		    -ms-transition: 0.6s;
+    		     -o-transition: 0.6s;
+    		        transition: 0.6s;
+    	}
+    }
 }
 
 
-.char-type {
-	padding: 15px;
-	display: block;
-}
-
-
-#character-detail {
-	.item-list,
-	.item-info {
-		padding-top: 15px;
-		padding-bottom: 15px;
-	}
-	.item-list {
-		text-align: left;
-	}
-}
-
-.footer {
+.site-footer {
   height: 60px;
+  padding-top: 15px;
+  p {
+  	color: #656565;	
+  }
 }
 
 

@@ -1,7 +1,11 @@
 var viewCharacter = function(){
-$('.set-url .btn').on('click',function(){
+$('.char-type').on('click',function(){
   $('.floating-detail').addClass('open');
   var dataUrl = $(this).attr('data-url');
+  var dataName = $(this).attr('char-img barbarian');
+  $('.char-type').removeClass('current');
+  $(this).addClass('current');
+  $('.pick-instruct').addClass('hide-arrow');
   $.ajax({
         type: "GET",
         url:dataUrl,
@@ -12,11 +16,24 @@ $('.set-url .btn').on('click',function(){
             console.log(response.responseJSON);
             var hitDie = (response.responseJSON.hit_die / 12)*100;
             $('#char-name').html(response.responseJSON.name);
+
             $('#hit-die .inner').css({
               width: hitDie+'%'
             });
 
 
+            var proficienciesData = [];
+			proficienciesData = response.responseJSON.proficiencies;
+
+			var proficienciesList=" ";
+            $.each(proficienciesData, function( index, armor ) {
+				   proficienciesList+="<li>" + armor.name + "</li>";
+			});
+            $('#proficiencies').html(proficienciesList);
+            
+            $('#item-logo').attr({
+            	class : response.responseJSON.name.toLowerCase()	
+            });
             loader.hide();
         }
     });
@@ -26,6 +43,7 @@ $('.set-url .btn').on('click',function(){
 
 $('.close-detail').click(function() {
 $('.floating-detail').removeClass('open');
+$('.char-type').removeClass('current');
 });
 
 var loader = $('#loader');
@@ -41,10 +59,11 @@ setTimeout(function(){
             success: function(result) {
                 var output="<div class='row'>";
                 $.each(result.results, function(key, val) {
-                  output+="<div class='col-md-3 col-sm-3 col-xs-6 centerAlign char-type'><h4 class='character-name'>" + val.name + "</h4><div class='set-url'><span class='btn btn-default' data-url='" + val.url + "'>View Character</span></div></div>";
+                  output+="<div class='col-md-4 col-sm-3 col-xs-6'> <div class='centerAlign char-type' data-url='" + val.url + "'><span class='char-img "+ val.name.toLowerCase() +"'></span><h4 class='character-name'>" + val.name + "</h4></div></div>";
                 });
                 displayResources.html(output);
                 loader.hide();
+                $('.main-wrapper').removeClass('transparent');
            },
            complete: function(){
               viewCharacter();

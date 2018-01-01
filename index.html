@@ -20,9 +20,10 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
-    <link rel="stylesheet" href="assets/css/main.css">
+    
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
 
     <script src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -33,15 +34,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <div class="main-wrapper">
+    <div class="main-wrapper transparent">
 
         <div class="header">
             <div class="container">
                 <div class="logo">
-                </div>
-
-                <div class="tittle-wrapper">
-                    <h1>The 5th Edition Dungeons and Dragons</h1>
+                  <img src="assets/images/loader-img.svg">
                 </div>
             </div>
         </div>
@@ -52,22 +50,33 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="tittle-wrapper">
+                            <h1>The 5th Edition Dungeons and Dragons</h1>
+                        </div>
                         <div id="intro-wrapper" class="intro">
+                        <p>The first Dungeons & Dragons game was played back when Gary Gygax and Dave Arneson chose to personalize the massive battles of their fantasy wargames with the exploits of individual heroes. This inspiration became the first fantasy roleplaying game, in which players are characters in an ongoing fantasy story. This new kind of game has become immensely popular over the years, and D&D has grown to include many new ways to vividly experience worlds of heroic fantasy.</p>
 
                         </div>
                     </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <span class="pick-instruct h3">Pick one of characters below</span>
+                      <div id="character-list">
+                      </div>
+                    </div>
                 </div>
 
-                <div id="character-list">
-                </div>
+                
             </div>
         </div>
+
         <div class="floating-detail">
             <span class="close-detail"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
             <div id="character-detail">
                 <div class="row">
+                    <div class="col-md-6 col-md-offset-4">
+                      <div id="item-logo"></div>
+                    </div>
                     <div class="col-md-4 item-list">
                         <span class="h5">
                       Name
@@ -75,7 +84,6 @@
                     </div>
                     <div class="col-md-8 item-info">
                         <span class="h5" id="char-name">
-
                     </span>
                     </div>
                     <div class="clearfix"></div>
@@ -85,30 +93,36 @@
                       Hit Die
                     </span>
                     </div>
-                    <div class="col-md-8 item-info">
+                    <div class="col-md-6 item-info">
                         <span class="range" id="hit-die">
                         <span class="inner"></span>
                         </span>
 
                     </div>
+
+                    <div class="col-md-4 item-list">
+                        <span class="h5">
+                          Proficiencies
+                        </span>
+                    </div>
+                    <div class="col-md-6 item-info">
+                        <ul class="inner-list" id="proficiencies">
+                        
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>
-
-
-        <div id="loader">
-            <div class="inner">
-                <img src="assets/images/loader-img.svg">
-            </div>
-            <div class="loader-spin">
-            </div>
-        </div>
-
-
-
-
-
     </div>
+
+    <div id="loader">
+          <div class="inner">
+              <img src="assets/images/loader-img.svg">
+          </div>
+          <div class="loader-spin">
+          </div>
+      </div>
 
     <!-- /main-wrapper -->
 
